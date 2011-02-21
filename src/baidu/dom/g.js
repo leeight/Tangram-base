@@ -25,7 +25,9 @@
 baidu.dom.g = function (id) {
     if ('string' == typeof id || id instanceof String) {
         return document.getElementById(id);
-    } else if (id && id.nodeName && (id.nodeType == 1 || id.nodeType == 9)) {
+    } else if (id &&
+               id.nodeName &&
+               (id.nodeType == 1 || id.nodeType == 9 || id.nodeType == 11)) {
         return id;
     }
     return null;

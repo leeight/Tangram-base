@@ -41,3 +41,9 @@ test('异常用例',function(){
 })
 
 
+test("Document Fragement", function(){
+  expect(1);
+
+  var fragment = document.createDocumentFragment();
+  equal(baidu.g(fragment) === fragment, true, "pass test");
+});
