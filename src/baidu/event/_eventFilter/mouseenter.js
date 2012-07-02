@@ -13,11 +13,11 @@
 ///import baidu.fn.bind;
 
 /**
- * 用于为非IE浏览器添加mouseenter的支持;
+ * 用于为Webkit内核浏览器添加mouseenter的支持;
  * mouseenter事件仅在鼠标进入元素区域触发一次,
  *    当鼠标在元素内部移动的时候不会多次触发.
  */
-baidu.event._eventFilter.mouseenter = window.attachEvent ? null : function(element,type, listener){
+baidu.event._eventFilter.mouseenter = ('onmouseenter' in document.body) ? null : function(element,type, listener){
 	return {
 		type: "mouseover",
 		listener: baidu.fn.bind(baidu.event._eventFilter._crossElementBoundary, this, listener)

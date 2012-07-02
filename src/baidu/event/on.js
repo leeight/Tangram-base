@@ -10,6 +10,8 @@
 
 ///import baidu.event._listeners;
 ///import baidu.dom._g;
+///import baidu.event._eventFilter.mouseenter;
+///import baidu.event._eventFilter.mouseleave;
 
 /**
  * 为目标元素添加事件监听器
